@@ -28,3 +28,34 @@ Content-Type: application/json
 
 ### Delete user
 DELETE http://localhost:5000/users/1
+
+### Get all fields
+GET http://localhost:5000/fields
+
+### Get field by ID
+GET http://localhost:5000/fields/1
+
+### Create field
+POST http://localhost:5000/fields
+Content-Type: application/json
+
+{
+  "name": "Lapangan A",
+  "type": "futsal",
+  "price_per_hour": 100000,
+  "description": "Lapangan futsal indoor"
+}
+
+### Update field
+PUT http://localhost:5000/fields/1
+Content-Type: application/json
+
+{
+  "name": "Lapangan A - Update",
+  "type": "futsal",
+  "price_per_hour": 120000,
+  "description": "Updated description"
+}
+
+### Delete field
+DELETE http://localhost:5000/fields/1
