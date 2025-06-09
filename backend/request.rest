@@ -94,3 +94,44 @@ Content-Type: application/json
 
 ### Delete booking
 DELETE http://localhost:5000/bookings/1
+
+### Get all payments
+GET http://localhost:5000/payments
+Content-Type: application/json
+
+###
+
+### Get payment by ID
+GET http://localhost:5000/payments/1
+Content-Type: application/json
+
+###
+
+### Create new payment
+POST http://localhost:5000/payments
+Content-Type: application/json
+
+{
+  "booking_id": 4,
+  "amount": 200000,
+  "method": "cash",
+  "status": "paid"
+}
+
+###
+
+### Update payment
+PUT http://localhost:5000/payments/1
+Content-Type: application/json
+
+{
+  "amount": 250000,
+  "method": "cash",
+  "status": "confirmed"
+}
+
+###
+
+### Delete payment
+DELETE http://localhost:5000/payments/1
+Content-Type: application/json
