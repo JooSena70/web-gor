@@ -6,6 +6,7 @@ import Users from './pages/Users';
 import Fields from './pages/Fields';
 import Bookings from './pages/Bookings';
 import Payments from './pages/Payments';
+import Schedules from './pages/Schedules';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/fields" element={<Fields />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/schedules" element={<Schedules />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>

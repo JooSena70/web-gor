@@ -135,3 +135,34 @@ Content-Type: application/json
 ### Delete payment
 DELETE http://localhost:5000/payments/1
 Content-Type: application/json
+
+### Get all schedules
+GET http://localhost:5000/schedules
+
+### Get one schedule
+GET http://localhost:5000/schedules/1
+
+### Create a new schedule
+POST http://localhost:5000/schedules
+Content-Type: application/json
+
+{
+  "field_id": 1,
+  "day": "Monday",
+  "open_time": "08:00:00",
+  "close_time": "20:00:00"
+}
+
+### Update schedule
+PUT http://localhost:5000/schedules/1
+Content-Type: application/json
+
+{
+  "field_id": 1,
+  "day": "Tuesday",
+  "open_time": "09:00:00",
+  "close_time": "21:00:00"
+}
+
+### Delete schedule
+DELETE http://localhost:5000/schedules/1
