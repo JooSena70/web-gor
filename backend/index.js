@@ -4,6 +4,7 @@ import db from "./config/database.js";
 import userRoutes from "./routes/userRoutes.js";
 import fieldRoute from "./routes/fieldRoute.js";
 
+
 const app = express();
 
 app.use(cors());
