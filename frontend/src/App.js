@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Users from './pages/Users';
 import Fields from './pages/Fields';
+import Bookings from './pages/Bookings';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
         <Route path="/fields" element={<Fields />} />
+        <Route path="/bookings" element={<Bookings />} />
+        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );
