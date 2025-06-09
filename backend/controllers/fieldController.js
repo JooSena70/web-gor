@@ -1,5 +1,5 @@
-import db from "../models/index.js";
-const Field = db.Field;
+import { Field } from "../models/index.js";
+
 
 // Get all fields
 export const getFields = async (req, res) => {
