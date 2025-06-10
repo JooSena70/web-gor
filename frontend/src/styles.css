@@ -1,31 +1,5 @@
 /* ===== ENHANCED SPORTS FIELD RENTAL WEBSITE STYLES ===== */
 
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  color: #333;
-}
-
-/* Container Styles */
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 /* Enhanced Navbar */
 .navbar {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -85,6 +59,34 @@ body {
   background-color: #27ae60;
   color: white;
 }
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
 
 /* Page Titles */
 .title {
@@ -338,21 +340,7 @@ body {
     border-radius: 15px;
   }
   
-  .navbar {
-    padding: 0.75rem 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .navbar a {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-right: none;
-    border-bottom: 1px solid #34495e;
-  }
-  
-  .navbar a:last-child {
-    border-bottom: none;
-  }
+
   
   .title {
     font-size: 2rem;
@@ -381,26 +369,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .navbar a {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .table-container {
-    overflow-x: auto;
-  }
-  
-  .table {
-    min-width: 600px;
-  }
-}
+
 
 /* Utility Classes */
 .mt-5 { margin-top: 3rem; }

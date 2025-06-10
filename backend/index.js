@@ -6,6 +6,7 @@ import fieldRoute from "./routes/fieldRoute.js";
 import bookingRoute from "./routes/bookingRoute.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import scheduleRoutes from "./routes/scheduleRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(fieldRoute);
 app.use(bookingRoute);
 app.use("/payments", paymentRoutes);
 app.use("/schedules", scheduleRoutes);
+app.use(authRoutes);
 
 // Sync database
 try {
