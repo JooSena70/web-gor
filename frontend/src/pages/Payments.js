@@ -30,10 +30,16 @@ const Payments = () => {
 
   const savePayment = async (e) => {
     e.preventDefault();
+    const payload = {
+      booking_id: form.booking_id,
+      payment_date: form.payment_date,
+      method: form.method,
+      status: form.status
+  };
     if (editId) {
-      await axios.put(`http://localhost:5000/payments/${editId}`, form);
+      await axios.put(`http://localhost:5000/payments/${editId}`, payload);
     } else {
-      await axios.post('http://localhost:5000/payments', form);
+      await axios.post('http://localhost:5000/payments', payload);
     }
     setForm({
       booking_id: '',
@@ -92,8 +98,7 @@ const Payments = () => {
               className="input"
               type="number"
               value={form.amount}
-              onChange={(e) => setForm({ ...form, amount: e.target.value })}
-              required
+              readOnly
             />
           </div>
         </div>
