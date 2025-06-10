@@ -92,14 +92,7 @@ const Payments = () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Amount</label>
           <div className="control">
-            <input
-              className="input"
-              type="number"
-              value={form.amount}
-              readOnly
-            />
           </div>
         </div>
         <div className="field">
