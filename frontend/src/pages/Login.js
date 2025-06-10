@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import "../Login.css"; // Import the CSS file
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -23,35 +24,35 @@ const Login = () => {
   };
 
   return (
-    <div style={{ margin: '2rem auto', maxWidth: '400px' }}>
+    <div className="login-container">
       <h1>Login</h1>
-      <form onSubmit={handleSubmit} style={{ marginTop: '1rem' }}>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <div style={{ marginBottom: '1rem' }}>
-          <label>Email</label>
+      <form className="login-form" onSubmit={handleSubmit}>
+        {error && <p className="error-message">{error}</p>}
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
           <input 
             type="email" 
+            id="email"
             value={form.email} 
             onChange={e => setForm({ ...form, email: e.target.value })} 
             required 
-            style={{ width: '100%', padding: '0.5rem' }}
           />
         </div>
-        <div style={{ marginBottom: '1rem' }}>
-          <label>Password</label>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
           <input 
             type="password" 
+            id="password"
             value={form.password} 
             onChange={e => setForm({ ...form, password: e.target.value })} 
             required 
-            style={{ width: '100%', padding: '0.5rem' }}
           />
         </div>
-        <button type="submit" style={{ padding: '0.5rem 1rem', background: '#3273dc', color: 'white', border: 'none' }}>
+        <button type="submit" className="login-button">
           Login
         </button>
       </form>
-      <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+      <div className="signup-link">
         <span>Don't have an account? </span>
         <Link to="/register">Signup now</Link>
       </div>
