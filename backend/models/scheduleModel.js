@@ -33,6 +33,9 @@ const Schedule = db.define("schedules", {
     type: DataTypes.TIME,
     allowNull: false,
   },
+}, {
+  tableName: "schedules",
+  timestamps: false,
 });
 
 Field.hasMany(Schedule, { foreignKey: "field_id" });
