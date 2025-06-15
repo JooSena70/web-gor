@@ -487,3 +487,21 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.legend-booked {
+  background-color: #ffcccb;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.legend-open {
+  background-color: #d4edda;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.legend-closed {
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-right: 10px;
+}
