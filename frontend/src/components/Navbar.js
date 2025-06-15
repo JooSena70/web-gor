@@ -1,14 +1,27 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import NavbarUser from './NavbarUser';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   if (location.pathname === '/login' || location.pathname === '/register') {
     return null;
   }
 
   const role = localStorage.getItem('role');
+
+  const handleLogout = async () => {
+    try {
+      await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+      localStorage.removeItem('role');
+      navigate('/login');
+    } catch (err) {
+      console.error('Logout failed', err);
+    }
+  };
 
   if (role === 'admin') {
     return (
@@ -19,10 +32,11 @@ const Navbar = () => {
         <Link to="/bookings">Bookings</Link>
         <Link to="/payments">Payments</Link>
         <Link to="/schedules">Schedules</Link>
+        <Link onClick={handleLogout}>Logout</Link>
       </nav>
     );
   } else if (role === 'user') {
-    return <NavbarUser />;
+    return <NavbarUser onLogout={handleLogout} />;
   } else {
     return null;
   }
