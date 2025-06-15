@@ -71,6 +71,18 @@ const Booking = () => {
 		getBookings();
 	};
 
+	const createForm = () => {
+		setForm({
+			user_id: "",
+			field_id: "",
+			booking_date: "",
+			start_time: "",
+			end_time: "",
+			status: "pending",
+		});
+		setEditId(null);
+	};
+
 	const editBooking = (booking) => {
 		setForm({
 			user_id: booking.user_id,
@@ -233,6 +245,13 @@ const Booking = () => {
 					<button className="button is-primary" type="submit">
 						{editId ? "Update" : "Add"} Booking
 					</button>
+					<button
+						className="button is-light"
+						type="button"
+						onClick={() => createForm()}
+					>
+						Create
+					</button>
 				</div>
 			</form>
 
@@ -322,7 +341,6 @@ const Booking = () => {
 					</button>
 				</div>
 			)}
-      
 		</div>
 	);
 };

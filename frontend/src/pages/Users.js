@@ -28,6 +28,11 @@ const Users = () => {
     getUsers();
   };
 
+  const createUser = () => {
+    setForm({ name: '', email: '', password: '', role: 'user' });
+    setEditId(null);
+  };
+
   const editUser = (user) => {
     setForm(user);
     setEditId(user.id);
@@ -72,7 +77,8 @@ const Users = () => {
           </div>
         </div>
         <div className="control">
-          <button className="button is-primary" type="submit">{editId ? 'Update' : 'Add'} User</button>
+          <button className="button is-primary mr-2" type="submit">{editId ? 'Update' : 'Add'} User</button>
+          <button className="button is-light" type="button" onClick={() => createUser()}>Create</button>
         </div>
       </form>
 
