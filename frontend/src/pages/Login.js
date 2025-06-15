@@ -15,6 +15,7 @@ const Login = () => {
 				withCredentials: true,
 			});
 			localStorage.setItem("role", res.data.role);
+			localStorage.setItem("user_id", res.data.user.id);
 			if (res.data.role === "admin") {
 				navigate("/admin");
 			} else {

@@ -50,11 +50,21 @@ export const login = async (req, res) => {
 			role: user.role,
 		};
 
-		res.json(req.session.user);
+		// ✅ Kirim struktur yang sesuai untuk frontend
+		res.json({
+			message: "Login success",
+			user: {
+				id: user.id,
+				name: user.name,
+				email: user.email,
+			},
+			role: user.role,
+		});
 	} catch (err) {
 		res.status(400).json({ message: err.message });
 	}
 };
+// GET SESSION
 
 export const getSession = (req, res) => {
 	if (req.session.user) {

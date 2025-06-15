@@ -33,4 +33,12 @@ const User = db.define("users", {
   timestamps: false
 });
 
+// ✅ Tambahkan relasi (association)
+User.associate = (models) => {
+  User.hasMany(models.Booking, {
+    foreignKey: 'user_id',
+    as: 'bookings',
+  });
+};
+
 export default User;

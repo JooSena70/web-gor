@@ -34,4 +34,17 @@ const Booking = db.define("bookings", {
   updatedAt: false
 });
 
+// ⬇️ Tambahkan ini untuk relasi
+Booking.associate = (models) => {
+  Booking.belongsTo(models.User, {
+    foreignKey: 'user_id',
+    as: 'user',
+  });
+
+  Booking.belongsTo(models.Field, {
+    foreignKey: 'field_id',
+    as: 'field',
+  });
+};
+
 export default Booking;

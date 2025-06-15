@@ -3,7 +3,7 @@ import cors from "cors";
 import db from "./config/database.js";
 import userRoutes from "./routes/userRoutes.js";
 import fieldRoute from "./routes/fieldRoute.js";
-import bookingRoute from "./routes/bookingRoute.js";
+import bookingRoute from "./routes/BookingRoute.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import scheduleRoutes from "./routes/scheduleRoutes.js";
 import authRoutes from "./routes/authRoutes.js";

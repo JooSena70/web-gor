@@ -63,3 +63,22 @@ export const deleteBooking = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+export const createBookingByUserId = async (req, res) => {
+	const { userId } = req.params;
+	const { field_id, booking_date, start_time, end_time, status = "pending" } = req.body;
+
+	try {
+		const booking = await Booking.create({
+			user_id: userId,
+			field_id,
+			booking_date,
+			start_time,
+			end_time,
+			status,
+		});
+		res.status(201).json(booking);
+	} catch (err) {
+		res.status(400).json({ message: err.message });
+	}
+};
