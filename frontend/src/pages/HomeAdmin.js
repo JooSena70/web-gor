@@ -105,7 +105,7 @@ const HomeAdmin = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title mb-4">Admin Gantenk</h1>
+			<h1 className="title mb-4">Dashboard</h1>
 
 			<div className="field">
 				<label htmlFor="label">
