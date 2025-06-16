@@ -10,6 +10,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import HomeAdmin from './pages/HomeAdmin';
 import HomeUser from './pages/HomeUser';
+import PaymentsUser from './pages/PaymentsUser'; // Assuming you have a PaymentsUser page
+import BookingsUser from './pages/BookingsUser'; // Assuming you have a BookingsUser page
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<HomeAdmin />} />
-        <Route path="/user" element={<HomeUser />} />
+        <Route path="/user" element={<HomeAdmin />} />  
+        <Route path="/payments_user" element={<PaymentsUser />} />
+        <Route path="/bookings_user" element={<BookingsUser />} />
+
         {/* Add more routes as needed */}
       </Routes>
     </Router>

@@ -19,6 +19,27 @@ export const getPaymentById = async (req, res) => {
   }
 };
 
+// controllers/PaymentsController.js
+export const getPaymentsByUser = async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    const payments = await Payment.findAll({
+      include: [
+        {
+          model: Booking,
+          where: { user_id: userId },
+          required: true, // wajib, agar hanya booking milik user
+        }
+      ]
+    });
+
+    res.json(payments);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
 export const createPayment = async (req, res) => {
   try {
     const { booking_id, method, status } = req.body;
