@@ -102,7 +102,7 @@ const Payments = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title">Payment Managementsssss</h1>
+			<h1 className="title">Payment Managements</h1>
 
 			<table className="table is-striped is-fullwidth">
 				<thead>
