@@ -275,6 +275,7 @@ const BookingUser = () => {
 				<thead>
 					<tr>
 						<th>No</th>
+						<th>ID Booking</th>
 						<th>User</th>
 						<th>Field</th>
 						<th>Date</th>
@@ -287,6 +288,7 @@ const BookingUser = () => {
 					{bookings.map((booking, index) => (
 						<tr key={booking.id}>
 							<td>{index + 1}</td>
+							<td>ID - {booking.id}</td>
 							<td>
 								{users.find((u) => u.id === booking.user_id)?.name || "-"}
 							</td>
