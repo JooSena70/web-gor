@@ -266,14 +266,7 @@ const BookingUser = () => {
 				<div className="control">
 					<button className="button is-primary" type="submit">
 						{editId ? "Update" : "Add"} Booking
-					</button>
-					<button
-						className="button is-light"
-						type="button"
-						onClick={() => createForm()}
-					>
-						Create
-					</button>
+					</button>					
 				</div>
 			</form>
 

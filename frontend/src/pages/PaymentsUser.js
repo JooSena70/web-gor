@@ -191,22 +191,16 @@ const Payments = () => {
 				<thead>
 					<tr>
 						<th>No</th>
-						<th>Booking</th>
 						<th>Amount</th>
 						<th>Payment Date</th>
 						<th>Method</th>
-						<th>Status</th>
-						<th>Action</th>
+						<th>Status</th>						
 					</tr>
 				</thead>
 				<tbody>
 					{payments.map((payment, index) => (
 						<tr key={payment.id}>
 							<td>{index + 1}</td>
-							<td>
-								Booking #{payment.booking_id} -{" "}
-								{payment.Booking?.booking_date || "-"}
-							</td>
 							<td>
 								Rp{" "}
 								{parseFloat(payment.amount || 0).toLocaleString("id-ID", {
@@ -216,20 +210,7 @@ const Payments = () => {
 							<td>{payment.payment_date}</td>
 							<td>{payment.method}</td>
 							<td>{payment.status}</td>
-							<td>
-								<button
-									onClick={() => editPayment(payment)}
-									className="button is-small is-info mr-2"
-								>
-									Edit
-								</button>
-								<button
-									onClick={() => deletePayment(payment.id)}
-									className="button is-small is-danger"
-								>
-									Delete
-								</button>
-							</td>
+							
 						</tr>
 					))}
 					{payments.length === 0 && (
