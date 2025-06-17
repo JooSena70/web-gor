@@ -113,7 +113,6 @@ const Payments = () => {
             <th>Payment Date</th>
             <th>Method</th>
             <th>Status</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -134,20 +133,6 @@ const Payments = () => {
                 <td>{payment.payment_date}</td>
                 <td>{payment.method}</td>
                 <td>{payment.status}</td>
-                <td>
-                  <button
-                    onClick={() => editPayment(payment)}
-                    className="button is-small is-info mr-2"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => deletePayment(payment.id)}
-                    className="button is-small is-danger"
-                  >
-                    Delete
-                  </button>
-                </td>
               </tr>
             );
           })}
