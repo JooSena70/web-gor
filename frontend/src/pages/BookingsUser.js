@@ -164,7 +164,7 @@ const BookingUser = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title">Booking User</h1>
+			<h1 className="title">Booking Users</h1>
 			<form onSubmit={saveBooking} className="box">
 				<div className="field">
 					<label className="label">User</label>
@@ -254,6 +254,7 @@ const BookingUser = () => {
 								onChange={(e) =>
 									setForm({ ...form, status: e.target.value })
 								}
+								disabled
 							>
 								<option value="pending">Pending</option>
 								<option value="confirmed">Confirmed</option>
@@ -280,7 +281,6 @@ const BookingUser = () => {
 						<th>Start</th>
 						<th>End</th>
 						<th>Status</th>
-						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -297,20 +297,6 @@ const BookingUser = () => {
 							<td>{booking.start_time}</td>
 							<td>{booking.end_time}</td>
 							<td>{booking.status}</td>
-							<td>
-								<button
-									onClick={() => editBooking(booking)}
-									className="button is-small is-info mr-2"
-								>
-									Edit
-								</button>
-								<button
-									onClick={() => deleteBooking(booking.id)}
-									className="button is-small is-danger"
-								>
-									Delete
-								</button>
-							</td>
 						</tr>
 					))}
 				</tbody>
