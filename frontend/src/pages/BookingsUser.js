@@ -164,7 +164,7 @@ const BookingUser = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title">Booking Usersss</h1>
+			<h1 className="title">Booking User</h1>
 			<form onSubmit={saveBooking} className="box">
 				<div className="field">
 					<label className="label">User</label>

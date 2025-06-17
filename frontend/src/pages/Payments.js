@@ -146,7 +146,7 @@ const Payments = () => {
 							>
 								<option value="pending">Pending</option>
 								<option value="paid">Paid</option>
-								<option value="unpaid">Failed</option>
+								<option value="unpaid">Unpaid</option>
 							</select>
 						</div>
 					</div>

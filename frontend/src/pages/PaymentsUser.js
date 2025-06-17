@@ -102,7 +102,7 @@ const Payments = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title">Payment Managementsssss</h1>
+			<h1 className="title">Payment Management</h1>
 			<form onSubmit={savePayment} className="box">
 				<div className="field">
 					<label className="label">Booking</label>
