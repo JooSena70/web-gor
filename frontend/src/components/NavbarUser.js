@@ -12,6 +12,7 @@ const NavbarUser = ({ onLogout }) => (
     <div className='navbar-menu'>
 
       <Link to="/user">Home</Link>
+      <Link to="/fields_user">Fields</Link>
       <Link to="/bookings_user">Bookings</Link>
       <Link to="/payments_user">Payments</Link>
 

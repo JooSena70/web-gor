@@ -12,6 +12,7 @@ import HomeAdmin from './pages/HomeAdmin';
 import HomeUser from './pages/HomeUser';
 import PaymentsUser from './pages/PaymentsUser'; // Assuming you have a PaymentsUser page
 import BookingsUser from './pages/BookingsUser'; // Assuming you have a BookingsUser page
+import FieldsUser from './pages/FieldsUser'; // Assuming you have a FieldsUser page
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/user" element={<HomeAdmin />} />  
         <Route path="/payments_user" element={<PaymentsUser />} />
         <Route path="/bookings_user" element={<BookingsUser />} />
+        <Route path='/fields_user' element={<FieldsUser />} />
 
         {/* Add more routes as needed */}
       </Routes>

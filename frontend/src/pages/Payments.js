@@ -146,7 +146,7 @@ const Payments = () => {
 							>
 								<option value="pending">Pending</option>
 								<option value="paid">Paid</option>
-								<option value="failed">Failed</option>
+								<option value="unpaid">Unpaid</option>
 							</select>
 						</div>
 					</div>
@@ -154,14 +154,7 @@ const Payments = () => {
 				<div className="control">
 					<button className="button is-primary" type="submit">
 						{editId ? "Update" : "Add"} Payment
-					</button>
-					<button
-						className="button is-light"
-						type="button"
-						onClick={() => createForm()}
-					>
-						Create
-					</button>
+					</button>					
 				</div>
 			</form>
 
@@ -195,13 +188,7 @@ const Payments = () => {
 							<td>{payment.payment_date}</td>
 							<td>{payment.method}</td>
 							<td>{payment.status}</td>
-							<td>
-								<button
-									onClick={() => editPayment(payment)}
-									className="button is-small is-info mr-2"
-								>
-									Edit
-								</button>
+							<td>								
 								<button
 									onClick={() => deletePayment(payment.id)}
 									className="button is-small is-danger"

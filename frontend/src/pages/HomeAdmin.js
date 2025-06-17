@@ -279,6 +279,19 @@ const HomeAdmin = () => {
 														{b.start_time.slice(0, 5)} -{" "}
 														{b.end_time.slice(0, 5)}
 													</div>
+												)),
+												getScheduleForDay(field.id, dateStr).map((s, idx) => (
+													<div
+														key={idx}
+														style={{
+															backgroundColor: "#d4edda",
+															marginBottom: "3px",
+															padding: "2px",
+														}}
+													>
+														{s.open_time.slice(0, 5)} -{" "}
+														{s.close_time.slice(0, 5)}
+													</div>
 												))
 											) : getScheduleForDay(field.id, dateStr).length > 0 ? (
 												getScheduleForDay(field.id, dateStr).map((s, idx) => (

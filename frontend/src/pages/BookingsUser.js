@@ -267,14 +267,7 @@ const BookingUser = () => {
 				<div className="control">
 					<button className="button is-primary" type="submit">
 						{editId ? "Update" : "Add"} Booking
-					</button>
-					<button
-						className="button is-light"
-						type="button"
-						onClick={() => createForm()}
-					>
-						Create
-					</button>
+					</button>					
 				</div>
 			</form>
 
@@ -282,6 +275,7 @@ const BookingUser = () => {
 				<thead>
 					<tr>
 						<th>No</th>
+						<th>ID Booking</th>
 						<th>User</th>
 						<th>Field</th>
 						<th>Date</th>
@@ -294,6 +288,7 @@ const BookingUser = () => {
 					{bookings.map((booking, index) => (
 						<tr key={booking.id}>
 							<td>{index + 1}</td>
+							<td>ID - {booking.id}</td>
 							<td>
 								{users.find((u) => u.id === booking.user_id)?.name || "-"}
 							</td>
